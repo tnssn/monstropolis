@@ -8,7 +8,7 @@ export default {
         return {
             hoge: 'ねこはいます',
             isShow: false,
-            arr: [ 1000, 3, 5, 7, ],
+            arr: [ 1000, 3, 5, 7, '文字も入れられる？',],
             car :{
               name: "kuruma",
               color: "akai",
@@ -52,7 +52,9 @@ export default {
 
       </div>  
       {{ arr[0] }}匹の筋肉<br>
-      おぶじぇくと{{ car.name }}なまえ
+      おぶじぇくと{{ car.name }}なまえ<br>
+
+      配列に文字をいれるテスト「{{ arr[4] }}」<br>
 
       </nav>
     </div>
