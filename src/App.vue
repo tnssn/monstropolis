@@ -1,7 +1,27 @@
-<script> 
+<script>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-}
+
+export default {
+
+  data(){
+        return {
+            hoge: 'ねこはいます',
+            isShow: false,
+            arr: [ 1000, 3, 5, 7, ],
+            car :{
+              name: "kuruma",
+              color: "akai",
+              speed: "hayai"
+            },
+            count:0
+        }
+    },
+
+   components: {
+     HelloWorld,
+   }
+} 
 </script>
 
 <template>
@@ -14,11 +34,29 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <div v-if="isShow">
+          {{hoge}} {{hoge}} {{hoge}} 
+        </div>
+        <div v-for="item in arr" :key="item">
+         {{item}}
+        </div>
+        <div v-for="(item, index) in arr" :key="item">
+   {{index}}番目に案内 -  番号札{{item}}の落ち着いた方
+</div>
+      <div v-for="(item, key) in car">
+        {{key}} - {{ item }}
+
+
+      </div>  
+      {{ arr[0] }}匹の筋肉<br>
+      おぶじぇくと{{ car.name }}なまえ
+
       </nav>
     </div>
   </header>
 
   <RouterView />
+  <button @click="isShow = !isShow">toggle</button> 
 </template>
 
 <style scoped>
