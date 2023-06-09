@@ -26,13 +26,9 @@ export default {
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+    
     <div class="wrapper">
-      <div v-for="item in car">
-        <HelloWorld :msg="item" />
-      </div>
-     <HelloWorld msg="You did it!" />
+     <HelloWorld msg="Happiness is Mandatory." />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -40,30 +36,16 @@ export default {
         <div v-if="isShow">
           {{hoge}} {{hoge}} {{hoge}} 
         </div>
-        <div v-for="item in arr" :key="item">
-         {{item}}
-        </div>
-        <div v-for="(item, index) in arr" :key="item">
-   {{index}}番目に案内 -  番号札{{item}}の落ち着いた方
-</div>
-      <div v-for="(item, key) in car">
-        {{key}} - {{ item }}
-
-
-      </div>  
-      {{ arr[0] }}匹の筋肉<br>
-      おぶじぇくと{{ car.name }}なまえ<br>
-
-      配列に文字をいれるテスト「{{ arr[4] }}」<br>
-
       </nav>
+     <p>
+      配列に文字をいれるテスト「{{ arr[4] }}」<br>
+      おぶじぇくと{{ car.name }}なまえ<br>
+     </p>
     </div>
   </header>
 
   <RouterView />
-  <button @click="isShow = !isShow">toggle</button> 
-
-  
+    <button @click="isShow = !isShow">toggle</button> 
 </template>
 
 <style scoped>
