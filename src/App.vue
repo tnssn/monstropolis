@@ -3,32 +3,36 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-
+  components: {
+    HelloWorld
+  },
   data(){
-        return {
-            hoge: 'ねこはいます',
-            isShow: false,
-            arr: [ 1000, 3, 5, 7, '文字も入れられる？',],
-            car :{
-              name: "kuruma",
-              color: "akai",
-              speed: "hayai"
-            },
-            count:0
-        }
-    },
-
-   components: {
-     HelloWorld,
-   }
-} 
+    return {
+      hoge: 'ねこはいます',
+      isShow: false,
+      arr: [ 1000, 3, 5, 7, 'I am a cat.'],
+      car :{
+        name: "kuruma",
+        color: "akai",
+        speed: "hayai",
+      },
+      count: 0,
+    }
+  },
+  methods: {
+    // 関数ここ
+    increment() {
+      this.count++
+    }
+  }
+}
 </script>
 
 <template>
   <header>
     
     <div class="wrapper">
-     <HelloWorld msg="Happiness is Mandatory." />
+     <h1>count: {{count}}匹のねこ！！！</h1>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -45,7 +49,8 @@ export default {
   </header>
 
   <RouterView />
-    <button @click="isShow = !isShow">toggle</button> 
+    <button @click="isShow = !isShow">ねこをふやす</button> 
+    <button @click="increment">+1</button>
 </template>
 
 <style scoped>
