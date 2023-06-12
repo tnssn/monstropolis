@@ -1,10 +1,12 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue'
 
 export default {
   components: {
-    HelloWorld
+//    HelloWorld,
+    TheHeader
   },
   data(){
     return {
@@ -34,7 +36,10 @@ export default {
 </script>
 
 <template>
-  <header>
+  <TheHeader />
+  <RouterView />
+  <!--
+    <header>
     
     <div class="wrapper">
      <h1>count: {{count}}匹のねこ！！！</h1>
@@ -55,11 +60,10 @@ export default {
   </header>
 
   <RouterView />
-    <button @click="isShow = !isShow">ねこをふやす</button> 
-    <button @click="increment">+1</button>
-    
+  <button @click="isShow = !isShow">ねこをふやす</button> 
+  <button @click="increment">+1</button>
+  -->
 </template>
-
 <style scoped>
 header {
   line-height: 1.5;
@@ -122,4 +126,5 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+
 </style>
