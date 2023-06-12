@@ -8,9 +8,9 @@ export default {
   },
   data(){
     return {
-      hoge: 'ねこはいます',
+      hoge: 'にゃんにゃか',
       isShow: false,
-      arr: [ 1000, 3, 5, 7, 'I am a cat.'],
+      arr: [ 1000, 3, 5, 'I am a cat.', 'You are a cat.'],
       car :{
         name: "kuruma",
         color: "akai",
@@ -24,6 +24,11 @@ export default {
     increment() {
       this.count++
     }
+  },
+  computed: {
+    juusanbai() {
+      return this.count * 13
+    }
   }
 }
 </script>
@@ -33,6 +38,7 @@ export default {
     
     <div class="wrapper">
      <h1>count: {{count}}匹のねこ！！！</h1>
+     裏にはcountの13倍、{{ juusanbai }}匹のハムスターが!!
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -51,6 +57,7 @@ export default {
   <RouterView />
     <button @click="isShow = !isShow">ねこをふやす</button> 
     <button @click="increment">+1</button>
+    
 </template>
 
 <style scoped>
