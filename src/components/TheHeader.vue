@@ -1,8 +1,9 @@
 <template>
     <nav>
-    <router-link to="/">home</router-link><router-link to="/about">about</router-link>
+    <router-link to="/">home</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/develop">Develop</router-link>
     </nav>
-
     
 </template>
 
@@ -13,7 +14,6 @@ nav {
   text-align: center;
   margin-top: 2rem;
 }
-
 
 nav a {
   color: #96a4c8;
