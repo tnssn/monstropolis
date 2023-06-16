@@ -1,17 +1,25 @@
 <script>
 export default{
+    mounted(){
+        console.log("表示のタイミングでよむやつ！"),
+        this.next()
+    },
     data(){
         return{
-            formShiritori:"ぱぱげーの",
-            shiritori: ["りんご", "ごりら", "らっぱ"],
-            nextHead:"ぱ",
-            last_shiri:"",
+            formShiritori:"ぱぱげーの", //フォーム
+            shiritori: ["りんご", "ごりら", "らっぱ"], 
+            last_shiri:"", //shiritoriの最後を引っ張り出す
+            nextHead:"", //つぎのもじ
         }
     },
     methods: {
         addShiritori() {
+            if (this.formShiritori.length > 1) {
             this.shiritori.push(this.formShiritori),
             this.next()
+        } else {
+            console.log("1文字以下禁止！")
+        }
             },
         delShiritori() {
             this.shiritori.pop(),
@@ -21,8 +29,8 @@ export default{
         this.last_shiri = this.shiritori.slice(-1)[0],
         this.nextHead = this.last_shiri.slice(-1),
         this.formShiritori = this.nextHead
-    }
-    }
+        },
+    },
 }
 </script>
 <template>
