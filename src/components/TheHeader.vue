@@ -2,6 +2,7 @@
     <nav>
     <router-link to="/">home</router-link>
     <router-link to="/about">About</router-link>
+    <router-link to="/shiritori">しりとり</router-link>
     <router-link to="/develop">Develop</router-link>
     </nav>
     
