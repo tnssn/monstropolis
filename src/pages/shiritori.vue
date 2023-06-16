@@ -5,7 +5,8 @@ export default{
             count: 3,
             formShiritori:"ぱぱげーの",
             shiritori: ["りんご", "ごりら", "らっぱ"],
-            nextHead:"",
+            nextHead:"ぱ",
+            last_shiri:"",
         }
     },
     methods: {
@@ -15,10 +16,13 @@ export default{
             this.next()
             },
         delShiritori() {
-            this.shiritori.pop()
+            this.shiritori.pop(),
+            this.count--,
+            this.next()
         },
         next() {
-        this.nextHead = this.formShiritori.slice(-1)
+        this.last_shiri = this.shiritori.slice(-1)[0],
+        this.nextHead = this.last_shiri.slice(-1),
         this.formShiritori = this.nextHead
     }
     }
@@ -28,7 +32,7 @@ export default{
 <div>
     <h1>しりとりびゅー</h1>
     <p>最強のしりとり盤面を作ろう！</p>
-    <p>現在：{{ count }}</p>
+    <p>現在：{{ shiritori.length }}</p>
     <div id="shiritoList">
         <ul>
             <li v-for="shiritori in shiritori">{{ shiritori }}</li>
