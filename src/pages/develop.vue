@@ -54,17 +54,25 @@ export default{
 
 <hr>
 
-        <div>ねこちゃんを増やす</div>
+        <h2>ねこちゃんを増やす</h2>
         <div>{{ count }}</div>
         <div>繰り返しながらボタンを作ってみよう</div>
         <button v-for="key in key" @click="add(key)">{{key}}増やすボタン？</button>
         <br><br>
-
+<hr>
+        <h2>いべんとあれこれ</h2>
         <div>
-            中身が見えたり、要復讐<br>
-        <!--わからねえ@click="sample" は @click="sample($event)"-->
-        <button @click="sample">コンソールをみてね</button><br>
-
+            こんそるにログ出せって言ってる！こんそるみるべし！<br>
+        <p>@click="sample" は @click="sample($event)"という意味。</p>
+        <p>$eventはVueにおける予約語です。</p>
+        <button @click="sample">@click="sample"</button><br>
+        
+        <button @click="sample()">@click="sample()"</button><br>
+        <p>引数がひとつもないと、 undefiendなる</p>
+        <button @click="sample(1)">@click="sample(1)"</button><br>
+        <p>これは1が出るはず</p>
+        
+<hr>
 
         <div>だがこれはどうかな？</div>
         <p>add(num)を使ってみる</p>
