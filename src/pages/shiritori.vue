@@ -2,7 +2,6 @@
 export default{
     data(){
         return{
-            count: 3,
             formShiritori:"ぱぱげーの",
             shiritori: ["りんご", "ごりら", "らっぱ"],
             nextHead:"ぱ",
@@ -12,12 +11,10 @@ export default{
     methods: {
         addShiritori() {
             this.shiritori.push(this.formShiritori),
-            this.count++,
             this.next()
             },
         delShiritori() {
             this.shiritori.pop(),
-            this.count--,
             this.next()
         },
         next() {
