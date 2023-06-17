@@ -10,26 +10,58 @@ export default{
             shiritori: ["りんご", "ごりら", "らっぱ"], 
             last_shiri:"", //shiritoriの最後を引っ張り出す
             nextHead:"", //つぎのもじ
+            alertShow:false,
+            alertMessage:"【しりとり注意！】"
         }
     },
     methods: {
         addShiritori() {
-            if (this.formShiritori.length > 1) {
-            this.shiritori.push(this.formShiritori),
-            this.next()
-        } else {
-            console.log("1文字以下禁止！")
-        }
+                if (this.formShiritori.length > 1) {             
+                    if (this.formShiritori.slice(0, 1) == this.nextHead){       
+                        this.shiritori.push(this.formShiritori),
+                        this.alertShow = false,
+                        this.next()
+                    } else {
+                        console.log(this.formShiritori.slice(0, 1)),
+                        console.log(this.nextHead),
+                        console.log("尻がとれてない"),
+                        this.alertMessage = "【しりとりをしてください】"
+                        this.alertShow = true
+                    }
+                } else {
+                    this.alertMessage = "【2文字以上の単語を入力してください】",
+                    this.alertShow = true
+                }
             },
         delShiritori() {
             this.shiritori.pop(),
             this.next()
         },
         next() {
-        this.last_shiri = this.shiritori.slice(-1)[0],
-        this.nextHead = this.last_shiri.slice(-1),
-        this.formShiritori = this.nextHead
+            this.last_shiri = this.shiritori.slice(-1)[0],
+            this.nextHead = this.last_shiri.slice(-1),
+            this.formShiritori = this.nextHead
+            // しりが長音か
+            if(this.nextHead == "ー"){
+                console.log("尻長音の判定")
+                this.nextHead = this.last_shiri.slice(-2,-1),
+            this.formShiritori = this.nextHead
+            }
         },
+        topHantei(){
+            if (this.formShiritori.slice(0, 1) == this.nextHead){
+                console.log(this.formShiritori.slice(0, 1)),
+                console.log(this.nextHead),
+                console.log("尻がとれた"),
+                this.alertShow = false
+            } else {
+                console.log(this.formShiritori.slice(0, 1)),
+                console.log(this.nextHead),
+                console.log("尻がとれてない"),
+                this.alertMessage = "【しりとりをしてください】"
+                this.alertShow = true
+            }
+        }
     },
 }
 </script>
@@ -43,6 +75,7 @@ export default{
             <li v-for="shiritori in shiritori">{{ shiritori }}</li>
         </ul>
     </div>
+    <div v-if="alertShow">{{ alertMessage }}</div>
     <p>次の文字「{{ nextHead }}」</p>
     <input v-model="formShiritori">
     <button @click="addShiritori">しりとり</button>
