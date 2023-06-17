@@ -1,7 +1,7 @@
 <script>
 export default{
     mounted(){
-        console.log("表示のタイミングでよむやつ！"),
+        console.log("表示のタイミングでよむやつ"),
         this.next()
     },
     data(){
@@ -11,7 +11,8 @@ export default{
             last_shiri:"", //shiritoriの最後を引っ張り出す
             nextHead:"", //つぎのもじ
             alertShow:false,
-            alertMessage:"【しりとり注意！】"
+            alertMessage:"【しりとり注意！】",
+            gameOverShow: false,
         }
     },
     methods: {
@@ -46,6 +47,10 @@ export default{
                 console.log("尻長音の判定")
                 this.nextHead = this.last_shiri.slice(-2,-1),
             this.formShiritori = this.nextHead
+            } else if(this.nextHead !== "ん") {
+                this.gameOverShow = false
+            } else {
+            this.gameOverShow = true
             }
         },
         topHantei(){
@@ -75,6 +80,7 @@ export default{
             <li v-for="shiritori in shiritori">{{ shiritori }}</li>
         </ul>
     </div>
+    <div v-if="gameOverShow">【「ん」で終わったらおしまい！】</div>
     <div v-if="alertShow">{{ alertMessage }}</div>
     <p>次の文字「{{ nextHead }}」</p>
     <input v-model="formShiritori">
