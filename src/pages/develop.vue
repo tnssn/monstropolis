@@ -51,6 +51,24 @@ export default{
 <template>
     <div>
         <h1>Develop……つまり砂場にゃ！</h1>
+        
+        <p>vuetifyであそんでみよう</p>
+        <v-btn>
+        Button
+        </v-btn>
+        <br><br>
+        <v-card
+         title="ハノイの塔"
+         text="ハノイの塔（ハノイのとう、Tower of Hanoi）は、パズルの一種。 バラモンの塔または ルーカスタワー(Lucas' Tower)とも呼ばれる。 "
+         >
+        <v-card-actions>
+            <v-btn variant="outlined">まだつくってない</v-btn>
+        </v-card-actions>
+        </v-card>
+
+        <p>新しいタイトル<v-chip variant="outlined">新作</v-chip></p>
+
+
 
         <div>
         <ul>

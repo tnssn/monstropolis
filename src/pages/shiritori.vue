@@ -67,9 +67,9 @@ export default{
     <div v-if="gameOverShow">【「ん」で終わったらおしまい！】</div>
     <div v-if="alertShow">{{ alertMessage }}</div>
     <p>次の文字「{{ nextHead }}」</p>
-    <input v-model="formShiritori">
-    <button @click="addShiritori" :disabled="gameOverShow">しりとり</button>
-    <button @click="delShiritori">一個戻る</button>
+    <v-text-field variant="outlined" v-model="formShiritori"></v-text-field>
+    <v-btn @click="addShiritori" :disabled="gameOverShow" class="bg-blue-accent-1">しりとり</v-btn>
+    <v-btn @click="delShiritori" variant="outlined" class="text-red">一個戻る</v-btn>
 
 </div>
 </template>

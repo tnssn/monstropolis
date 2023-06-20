@@ -17,7 +17,7 @@ export default{
     <div>
         <h1>ぼたんたん</h1>
         <h2>これは一個ずつ増えるボタン</h2>
-        <button v-for="key in key" @click="add">ボタン？</button>
+        <v-btn v-for="key in key" @click="add">ボタン？</v-btn>
         <br>
         <hr>
         <br>
