@@ -1,5 +1,10 @@
 <script>
+import ListItem from '@/components/ListItem.vue'
+
     export default {
+        components: {
+            ListItem // この定義忘れるとこんそるで黄色に怒られる
+        },
         data() {
             return {
             hoge: 'にゃんにゃか',
@@ -55,6 +60,15 @@
 <template>
     <div>
     <h1>Home</h1>
+
+        <div>
+        <ul>
+        <ListItem :msg="item" v-for="(item, key) in car" :key="key"></ListItem>
+        </ul>
+        </div>
+        <p>msg="item"だと文字列</p>
+        <p>:msg="  このなかはJavaScript "</p>
+
 
     <div>
         {{message}} 
