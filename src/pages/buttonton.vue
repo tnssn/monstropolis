@@ -1,5 +1,9 @@
 <script>
+import buttonCom from '@/components/butonCom.vue';
 export default{
+    components: {
+        buttonCom
+    },
     data(){
         return{
             buttonkey:[1],
@@ -24,6 +28,10 @@ export default{
         <br>
         <div v-if="isShow">ぼたんをおすと！でる！どのボタンでも出る</div>
         <v-btn v-for="n in 22"  @click="isShow = !isShow">ボタン？</v-btn>
+        <br>
+        <hr>
+        <br>
+        <buttonCom v-for="n in 22"></buttonCom>
     </div>
 
 
