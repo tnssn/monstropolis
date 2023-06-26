@@ -44,6 +44,7 @@ export default{
         delMessage() {
             this.messages.pop()
         }
+        
     }
 }
 </script>

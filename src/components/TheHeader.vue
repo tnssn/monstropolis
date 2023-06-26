@@ -5,6 +5,7 @@
     <router-link to="/shiritori">しりとり</router-link>
     <router-link to="/buttonton">ぼたん</router-link>
     <router-link to="/develop">Develop</router-link>
+    <router-link to="/dog">いぬ</router-link>
     </nav>
     
 </template>
