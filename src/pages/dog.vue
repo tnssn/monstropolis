@@ -7,16 +7,14 @@ export default{
     },
     methods: {
         async dog() {
-            const res = await fetch("https://dog.ceo/api/breeds/image/random", (res) => res.data())
-            this.inu = await res.json()
+            this.inu = await (await fetch("https://dog.ceo/api/breeds/image/random ")).json();
     }
 }
 }
 </script>
 <template>
-    <button @click="dog">いぬ</button>
-    いぬ？？？？
+    <v-btn @click="dog">いぬ</v-btn><br>
     <img :src="inu.message" />
-    {{ inu.message }}
+    <p>画像URL:{{ inu.message }}</p>
 
 </template>
