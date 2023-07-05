@@ -4,6 +4,19 @@ tnsさんのVue道場の作業場所だよ！
 
 This template should help get you started developing with Vue 3 in Vite.
 参上
+さ、参上されてる……　ねこはどこにでもいます。
+いえーい
+ねこです。よろしくおねがいします。by Renoa
+ライブシェアのサイドバーに、 Share Serverってある？ >ある！
+おしてみて
+Enter the TCP port or server URL to shareナンタラ
+5174 とか
+ヌ？
+やってみた〜　これは　ヌヌ　みれない
+なんかURL的なの表示されてるなら共有たのむ
+Host主だけ見れないURLかも
+画面共有してるのでやってみるゾ
+
 
 ## Recommended IDE Setup
 
