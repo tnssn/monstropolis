@@ -1,5 +1,7 @@
 # monstropolis
 
+tnsさんのVue道場の作業場所だよ！
+
 This template should help get you started developing with Vue 3 in Vite.
 参上
 
