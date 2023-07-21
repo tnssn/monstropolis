@@ -31,6 +31,7 @@ export default{
         <br>
         <hr>
         <br>
+        <h2>個別に押せるボタンを実装してみる</h2>
         <buttonCom v-for="n in 22"></buttonCom>
     </div>
 

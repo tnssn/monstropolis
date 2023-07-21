@@ -10,6 +10,7 @@ import ShiritoriCoomponent from "./pages/shiritori.vue"
 import ButtontonComponent from "./pages/buttonton.vue"
 import DevelopCoomponent from "./pages/Develop.vue"
 import DogComponent from "./pages/dog.vue"
+import GachaComponent from "./pages/gacha.vue"
 
 // Vuetify
 import 'vuetify/styles'
@@ -23,6 +24,7 @@ const Shiritori = { template: '<div>Shiritori</div>'}
 const Buttonton = { template: '<div>Buttonton</div>'}
 const Develop = { template: '<div>Develop</div>'}
 const Dog = { template: '<div>Dog</div>'}
+const Gacha = { template: '<div>Gacha</div>'}
 
 
 const routes = [
@@ -32,6 +34,7 @@ const routes = [
     { path: '/buttonton', component: ButtontonComponent },
     { path: '/develop', component: DevelopCoomponent},
     { path: '/dog', component: DogComponent},
+    { path: '/gacha', component: GachaComponent},
   ]
   
 // Vuetify
