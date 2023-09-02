@@ -7,6 +7,7 @@
     <router-link to="/develop">Develop</router-link>
     <router-link to="/dog">いぬ</router-link>
     <router-link to="/gacha">ガチャ</router-link>
+    <router-Link to="/tnssn">つなし</router-Link>
     </nav>
     
 </template>

@@ -11,6 +11,7 @@ import ButtontonComponent from "./pages/buttonton.vue"
 import DevelopCoomponent from "./pages/Develop.vue"
 import DogComponent from "./pages/dog.vue"
 import GachaComponent from "./pages/gacha.vue"
+import TnssnCompornent from "./pages/tnssn.vue"
 
 // Vuetify
 import 'vuetify/styles'
@@ -25,6 +26,7 @@ const Buttonton = { template: '<div>Buttonton</div>'}
 const Develop = { template: '<div>Develop</div>'}
 const Dog = { template: '<div>Dog</div>'}
 const Gacha = { template: '<div>Gacha</div>'}
+const Tnssn = { template: '<div>Tns</div>'}
 
 
 const routes = [
@@ -35,6 +37,7 @@ const routes = [
     { path: '/develop', component: DevelopCoomponent},
     { path: '/dog', component: DogComponent},
     { path: '/gacha', component: GachaComponent},
+    { path: '/tnssn', component: TnssnCompornent},
   ]
   
 // Vuetify
