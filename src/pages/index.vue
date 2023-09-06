@@ -1,9 +1,11 @@
 <script>
 import ListItem from '@/components/ListItem.vue'
+import myCounter from '@/components/myCounter.vue'
 
     export default {
         components: {
-            ListItem // この定義忘れるとこんそるで黄色に怒られる
+            ListItem, // この定義忘れるとこんそるで黄色に怒られる
+            myCounter
         },
         data() {
             return {
@@ -58,6 +60,11 @@ import ListItem from '@/components/ListItem.vue'
     }
 </script>
 <template>
+    <myCounter />
+
+    <myCounter />
+
+    <myCounter />
     <div>
     <h1>Home</h1>
 

@@ -1,8 +1,12 @@
 <script>
 import ListItem from '@/components/ListItem.vue'
+import myCounter from '@/components/myCounter.vue'
+import misstemsButton from '@/components/misstemsButton.vue'
 export default{
     components: {
-        ListItem // この定義忘れるとこんそるで黄色に怒られる
+        misstemsButton,
+        myCounter,
+        ListItem, // この定義忘れるとこんそるで黄色に怒られる
     },
     data(){
         return{
@@ -51,6 +55,19 @@ export default{
 <template>
     <div>
         <h1>Develop……つまり砂場にゃ！</h1>
+
+        <v-container>
+            <misstemsButton />
+
+        </v-container>
+
+        <hr>
+
+        <v-container>
+            <myCounter />
+        </v-container>
+
+        <hr>
         
         <p>vuetifyであそんでみよう</p>
         <v-btn>
