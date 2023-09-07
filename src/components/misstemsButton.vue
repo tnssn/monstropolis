@@ -3,12 +3,13 @@ export default{
     data(){
         return {
             misstemsStr:"みす",
-            buttonStrings:["てむず", "みすきー", "しす"]
+            buttonStrings:["てむず　", "みすきー", "しす", "いず　"]
         }
     },
     methods: {
-        addStr(){
-            this.misstemsStr += 'てむず'
+        addString(msg) {
+            console.log('追加文字列：' + msg)
+            this.misstemsStr += msg
             console.log(this.misstemsStr)
         }
     }
@@ -18,14 +19,8 @@ export default{
     <v-container>
         {{ misstemsStr }}
         <v-spacer></v-spacer>
-        <v-btn @click="addStr">てむず</v-btn>
-        
-        <!-- 作りかけ
-
         <div v-for="item in buttonStrings">
-            <v-btn @click="misstemsStr(item)">{{ item }}</v-btn>
+            <v-btn @click="addString(item)">{{ item }}</v-btn>
         </div>
-    
-        -->
     </v-container>
 </template>
